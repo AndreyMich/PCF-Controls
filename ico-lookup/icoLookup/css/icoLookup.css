@@ -1,0 +1,199 @@
+:root {
+    --clr-white: #fff;
+    --crl-light-gray: hsl(211, 45%, 89%);
+    --clr-gray: hsl(219, 15%, 55%);
+    --clr-dark-navy: hsl(217, 44%, 22%);
+    --blue-shade: hsl(216, 100%, 61%);
+    --blue: hsl(216, 95%, 58%);
+
+    --ff-primary: "Segoe UI",sans-serif;
+    --ff-body: var(--ff-primary);
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --fs-400: .9375rem;
+    --fs-600: 1.375rem;
+
+    --fs-body: var(--fs-400);
+    --fs-heading: var(--fs-600);
+
+    --fw-body: var(--fw-regular);
+    --fw-heading: var(--fw-bold);
+
+    --size-300:.625rem;
+    --size-500: 1rem;
+    --size-800: 1.5rem;
+    --size-900: 1.6875rem;
+    --size-1000:2.5rem;
+}
+
+
+/*Reset*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Images reset*/
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/*Components*/
+body {
+    font-family: var(--ff-body);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
+}
+
+.main-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    border-radius: var(--size-300);
+    background-color: var(--clr-white);
+}
+
+.dropdown{
+    min-width: 15em;
+    position: relative;
+    margin:2em;
+}
+
+.select{
+    background: #3a3a3a;
+    color:#fff;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    border:2px #2a2f3b solid;
+    border-radius: 0.5em;
+    padding: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.select-clicked{
+    border:2px #26489a solid;
+    box-shadow: 0 0 0.8em #26489a;
+}
+
+.select:hover{
+    background: #323741;
+}
+
+.caret{
+    width:0;
+    height:0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition:0.3s;
+
+}
+
+.caret-rotate{
+    transform: rotate(180deg);
+
+}
+
+.menu{
+    list-style:none;
+    padding:0.2em 0.5em;
+    background: #323741;
+    border:1px #363a43 solid;
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.2);
+    border-radius: 0.5em;
+    color:#9fa5b5;
+    position:absolute;
+    top:3em;
+    left:50%;
+    width:100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.menu li{
+    padding:0.7em 0.5em;
+    margin:0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+
+}
+
+.menu li:hover{
+    background: #2a2d35;
+
+}
+.active{
+    background: #23242a;
+}
+
+.menu-open{
+    display: block;
+    opacity: 1;
+}
+/*Utility classes*/
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+.fs-heading {
+    font-size: var(--fs-heading);
+}
+.font-color-gray{
+    color: var(--clr-gray);
+}
+.text-align-center {
+    text-align: center;
+}
+
